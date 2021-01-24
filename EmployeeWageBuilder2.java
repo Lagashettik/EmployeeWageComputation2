@@ -7,30 +7,30 @@ public class EmployeeWageBuilder2 {
 		}
 
 	void EmployeeWage(){
-
 		int isFullTime=1;
 		int isPartTime=2;
 		int WagePerHour=20;
-		int NoOfHours;
+		int NoOfHours=0;
 
-		double empCheck= Math.floor(Math.random() * 10) % 3;
+		int empCheck=(int) Math.floor(Math.random() * 10) % 3;
 
-		if(empCheck == isFullTime) {
-			System.out.println("Employee is Present");
+		switch (empCheck) {
+		case 1:
+			System.out.println("Employee is Full Time");
 			NoOfHours=8;
-			}
-		else if (empCheck == isPartTime){
+			break;
+		case 2:
 			System.out.println("Employee is Part Time");
 			NoOfHours=4;
-			}
-		else {
+			break;
+		case 0:
 			System.out.println("Employee is absent");
 			NoOfHours=0;
+			break;
 			}
 
 		int Payment= WagePerHour * NoOfHours;
 		System.out.println("Payment is "+Payment);
-
 		}
 
 	public static void main(String args[]) {
