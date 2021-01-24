@@ -11,6 +11,7 @@ public class EmployeeWageBuilder2 {
 		int isPartTime=2;
 		int WagePerHour=20;
 		int NoOfHours=0;
+		int Month=20;	//Here One Month as 20 Days
 
 		int empCheck=(int) Math.floor(Math.random() * 10) % 3;
 
@@ -29,8 +30,8 @@ public class EmployeeWageBuilder2 {
 			break;
 			}
 
-		int Payment= WagePerHour * NoOfHours;
-		System.out.println("Payment is "+Payment);
+		int Payment= WagePerHour * NoOfHours * Month;
+		System.out.println("Payment of One Month is "+Payment);
 		}
 
 	public static void main(String args[]) {
